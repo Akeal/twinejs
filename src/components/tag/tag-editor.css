@@ -53,3 +53,39 @@
 	border: 1px solid var(--light-purple);
 	color: var(--dark-purple);
 }
+
+.tag-editor .tag-name.color-pistachio {
+	background-color: var(--faint-pistachio);
+	border: 1px solid var(--light-pistachio);
+	color: var(--dark-pistachio);
+}
+
+.tag-editor .tag-name.color-sky {
+	background-color: var(--faint-sky);
+	border: 1px solid var(--light-sky);
+	color: var(--dark-sky);
+}
+
+.tag-editor .tag-name.color-emerald {
+	background-color: var(--faint-emerald);
+	border: 1px solid var(--light-emerald);
+	color: var(--dark-emerald);
+}
+
+.tag-editor .tag-name.color-pink {
+	background-color: var(--faint-pink);
+	border: 1px solid var(--light-pink);
+	color: var(--dark-pink);
+}
+
+.tag-editor .tag-name.color-tan {
+	background-color: var(--faint-tan);
+	border: 1px solid var(--light-tan);
+	color: var(--dark-tan);
+}
+
+.tag-editor .tag-name.color-dark-gray {
+	background-color: var(--faint-gray);
+	border: 1px solid var(--gray);
+	color: var(--black);
+}

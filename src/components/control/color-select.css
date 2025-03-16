@@ -85,6 +85,41 @@
 	stroke: var(--purple);
 }
 
+.color-select > label > .control > .proxy.pistachio svg {
+	fill: var(--pistachio);
+	stroke: var(--pistachio);
+}
+
+.color-select > label > .control > .proxy.sky svg {
+	fill: var(--sky);
+	stroke: var(--sky);
+}
+
+.color-select > label > .control > .proxy.emerald svg {
+	fill: var(--emerald);
+	stroke: var(--emerald);
+}
+
+.color-select > label > .control > .proxy.pink svg {
+	fill: var(--pink);
+	stroke: var(--pink);
+}
+
+.color-select > label > .control > .proxy.tan svg {
+	fill: var(--tan);
+	stroke: var(--tan);
+}
+
+.color-select > label > .control > .proxy.dark-gray svg {
+	fill: var(--dark-gray);
+	stroke: var(--dark-gray);
+}
+
+.color-select > label > .control > .proxy.black svg {
+	fill: var(--black);
+	stroke: var(--black);
+}
+
 .color-select > label > .control > select {
 	-webkit-appearance: none;
 	background-color: var(--white);

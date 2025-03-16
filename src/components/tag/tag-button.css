@@ -94,3 +94,81 @@
 .tag-button.color-purple .menu-button > .icon-button:hover {
 	background-color: var(--light-purple);
 }
+
+.tag-button.color-pistachio .menu-button > .icon-button {
+	background-color: var(--faint-pistachio);
+	border-color: var(--light-pistachio);
+}
+
+.tag-button.color-pistachio .menu-button > .icon-button .icon {
+	color: var(--dark-pistachio);
+}
+
+.tag-button.color-pistachio .menu-button > .icon-button:hover {
+	background-color: var(--light-pistachio);
+}
+
+.tag-button.color-sky .menu-button > .icon-button {
+	background-color: var(--faint-sky);
+	border-color: var(--light-sky);
+}
+
+.tag-button.color-sky .menu-button > .icon-button .icon {
+	color: var(--dark-sky);
+}
+
+.tag-button.color-sky .menu-button > .icon-button:hover {
+	background-color: var(--light-sky);
+}
+
+.tag-button.color-emerald .menu-button > .icon-button {
+	background-color: var(--faint-emerald);
+	border-color: var(--light-emerald);
+}
+
+.tag-button.color-emerald .menu-button > .icon-button .icon {
+	color: var(--dark-emerald);
+}
+
+.tag-button.color-emerald .menu-button > .icon-button:hover {
+	background-color: var(--light-emerald);
+}
+
+.tag-button.color-pink .menu-button > .icon-button {
+	background-color: var(--faint-pink);
+	border-color: var(--light-pink);
+}
+
+.tag-button.color-pink .menu-button > .icon-button .icon {
+	color: var(--dark-pink);
+}
+
+.tag-button.color-pink .menu-button > .icon-button:hover {
+	background-color: var(--light-pink);
+}
+
+.tag-button.color-tan .menu-button > .icon-button {
+	background-color: var(--faint-tan);
+	border-color: var(--light-tan);
+}
+
+.tag-button.color-tan .menu-button > .icon-button .icon {
+	color: var(--dark-tan);
+}
+
+.tag-button.color-tan .menu-button > .icon-button:hover {
+	background-color: var(--light-tan);
+}
+
+.tag-button.color-dark-gray .menu-button > .icon-button {
+	background-color: var(--faint-gray);
+	border-color: var(--light-gray);
+}
+
+.tag-button.color-dark-gray .menu-button > .icon-button .icon {
+	color: var(--black);
+}
+
+.tag-button.color-dark-gray .menu-button > .icon-button:hover {
+	background-color: var(--faint-gray);
+}
