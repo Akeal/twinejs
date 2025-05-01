@@ -45,6 +45,8 @@ describe('<MarqueeablePassageMap>', () => {
 				tagColors={{}}
 				visibleZoom={story.zoom}
 				zoom={story.zoom}
+				borderStyle="none"
+				borderColor="black"
 				{...props}
 			/>
 		);

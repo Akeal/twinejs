@@ -28,6 +28,8 @@ describe('<PassageCard>', () => {
 				onSelect={jest.fn()}
 				passage={fakePassage()}
 				tagColors={{}}
+				borderStyle="none"
+				borderColor="black"
 				{...props}
 			/>
 		);

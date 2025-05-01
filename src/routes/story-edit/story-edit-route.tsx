@@ -59,6 +59,8 @@ export const InnerStoryEditRoute: React.FC = () => {
 					startPassageId={story.startPassage}
 					tagColors={story.tagColors}
 					visibleZoom={visibleZoom}
+					borderStyle="none"
+					borderColor="black"
 					zoom={story.zoom}
 				/>
 				<PassageFuzzyFinder

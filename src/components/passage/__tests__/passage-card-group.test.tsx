@@ -16,6 +16,8 @@ describe('<PassageCardGroup>', () => {
 				passages={[fakePassage(), fakePassage()]}
 				onSelect={jest.fn()}
 				tagColors={{}}
+				borderStyle="none"
+				borderColor="black"
 				{...props}
 			/>
 		);

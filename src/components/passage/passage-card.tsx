@@ -19,6 +19,8 @@ export interface PassageCardProps {
 	onSelect: (passage: Passage, exclusive: boolean) => void;
 	passage: Passage;
 	tagColors: TagColors;
+	borderStyle: string;
+	borderColor: string;
 }
 
 // Needs to fill a large-sized passage card.
@@ -33,7 +35,9 @@ export const PassageCard: React.FC<PassageCardProps> = React.memo(props => {
 		onEdit,
 		onSelect,
 		passage,
-		tagColors
+		tagColors,
+		borderStyle = "none",
+		borderColor = "black",
 	} = props;
 	const {t} = useTranslation();
 	const className = React.useMemo(
@@ -65,7 +69,7 @@ export const PassageCard: React.FC<PassageCardProps> = React.memo(props => {
 			height: passage.height,
 			left: passage.left,
 			top: passage.top,
-			width: passage.width
+			width: passage.width,
 		}),
 		[passage.height, passage.left, passage.top, passage.width]
 	);
@@ -99,6 +103,8 @@ export const PassageCard: React.FC<PassageCardProps> = React.memo(props => {
 		[onSelect, passage]
 	);
 
+	const selectableCardStyle = { "border-style": borderStyle, "border-color": borderColor } as React.CSSProperties;
+
 	return (
 		<DraggableCore
 			nodeRef={container}
@@ -108,12 +114,14 @@ export const PassageCard: React.FC<PassageCardProps> = React.memo(props => {
 			onStop={onDragStop}
 		>
 			<div className={className} ref={container} style={style} data-passage-tags={passage.tags.join(' ')}>
+				
 				<SelectableCard
 					highlighted={passage.highlighted}
 					label={passage.name}
 					onDoubleClick={handleEdit}
 					onSelect={handleSelect}
 					selected={passage.selected}
+					style={selectableCardStyle}
 				>
 					<TagStripe tagColors={tagColors} tags={passage.tags} />
 					<h2>{passage.name}</h2>

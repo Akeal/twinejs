@@ -25,6 +25,8 @@ describe('<PassageMap>', () => {
 				tagColors={{}}
 				visibleZoom={1}
 				zoom={1}
+				borderStyle="none"
+				borderColor="black"
 				{...props}
 			/>
 		);

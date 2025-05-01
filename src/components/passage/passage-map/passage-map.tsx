@@ -19,6 +19,8 @@ export interface PassageMapProps {
 	tagColors: Story['tagColors'];
 	visibleZoom: number;
 	zoom: number;
+	borderStyle: string;
+	borderColor: string;
 }
 
 interface DragState {
@@ -78,6 +80,8 @@ export const PassageMap: React.FC<PassageMapProps> = props => {
 		onEdit,
 		onSelect,
 		passages,
+		borderStyle,
+		borderColor,
 		startPassageId,
 		tagColors,
 		visibleZoom,
@@ -221,6 +225,8 @@ export const PassageMap: React.FC<PassageMapProps> = props => {
 				onSelect={handleSelect}
 				passages={passages}
 				tagColors={tagColors}
+				borderStyle={borderStyle}
+				borderColor={borderColor}
 			/>
 		</div>
 	);

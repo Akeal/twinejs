@@ -38,6 +38,17 @@ export interface Passage {
 	 * Passage tags.
 	 */
 	tags: string[];
+
+	/**
+	 * Passage border style
+	 */
+	borderStyle: string;
+
+	/**
+	 * Passage border color
+	 */
+	borderColor: string;
+
 	/**
 	 * Body text of the passage.
 	 */
