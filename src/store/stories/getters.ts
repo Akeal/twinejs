@@ -159,6 +159,17 @@ export function storyPassageTags(story: Story) {
 	).sort();
 }
 
+export function storyPassageBorders(story: Story) {
+	return Array.from(
+		story.passages.reduce((result, passage) => {
+			if(passage.border != null){
+				result.add(passage.border);
+			}
+			return result;
+		}, new Set<string>())
+	).sort();
+}
+
 export function storyStats(story: Story) {
 	const links = story.passages.reduce<string[]>(
 		(links, passage) => [
@@ -191,6 +202,15 @@ export function storyTags(stories: Story[]) {
 	return Array.from(
 		stories.reduce((result, story) => {
 			story.tags && story.tags.forEach(tag => result.add(tag));
+			return result;
+		}, new Set<string>())
+	).sort();
+}
+
+export function storyBorders(stories: Story[]) {
+	return Array.from(
+		stories.reduce((result, story) => {
+			story.borders && story.borders.forEach(border => result.add(border));
 			return result;
 		}, new Set<string>())
 	).sort();

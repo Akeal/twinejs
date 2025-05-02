@@ -26,8 +26,8 @@ export function fakePassage(props?: Partial<Passage>): Passage {
 		name: faker.lorem.words(Math.ceil(Math.random() * 10)), // At least 1
 		selected: faker.datatype.boolean(),
 		text: faker.lorem.words(Math.round(Math.random() * 500)), // Might be 0
-		borderStyle: "none",
-		borderColor: "black",
+		border: null,
+		borders: [],
 		...props
 	};
 }
@@ -174,6 +174,8 @@ export function fakeStory(passageCount: number = 1): Story {
 			[tags[1]]: 'green',
 			[tags[2]]: 'blue'
 		},
+		borderColors: {},
+		borders: [],
 		zoom: Math.random()
 	};
 

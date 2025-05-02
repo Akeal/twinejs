@@ -39,15 +39,12 @@ export interface Passage {
 	 */
 	tags: string[];
 
-	/**
-	 * Passage border style
-	 */
-	borderStyle: string;
+	borders: string[];
 
 	/**
-	 * Passage border color
+	 * Border in use by a passage
 	 */
-	borderColor: string;
+	border: string | null;
 
 	/**
 	 * Body text of the passage.
@@ -120,6 +117,11 @@ export interface Story {
 	 * Author-specified colors for passage tags.
 	 */
 	tagColors: TagColors;
+
+	borders: string[];
+
+	borderColors: TagColors;
+
 	/**
 	 * Zoom level the story is displayed at.
 	 */

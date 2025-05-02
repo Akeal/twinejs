@@ -8,11 +8,10 @@ export interface SelectableCardProps extends CardProps {
 	onDoubleClick?: React.MouseEventHandler;
 	onSelect: (value: boolean, exclusive: boolean) => void;
 	selected?: boolean;
-	style?: React.CSSProperties;
 }
 
 export const SelectableCard: React.FC<SelectableCardProps> = props => {
-	const {label, onDoubleClick, onSelect, selected, style, ...other} = props;
+	const {label, onDoubleClick, onSelect, selected, ...other} = props;
 	const onClick = React.useCallback(
 		(event: React.MouseEvent) => {
 			if (event.ctrlKey || event.shiftKey) {
@@ -47,7 +46,6 @@ export const SelectableCard: React.FC<SelectableCardProps> = props => {
 			onClick={onClick}
 			onDoubleClick={onDoubleClick}
 			onKeyDown={onKeyDown}
-			style={style}
 			tabIndex={0}
 		>
 			<Card {...other} />

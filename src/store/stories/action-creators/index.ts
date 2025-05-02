@@ -16,3 +16,6 @@ export * from './tag-color';
 export * from './tag-passage';
 export * from './update-passage';
 export * from './update-story';
+export * from './border-color';
+export * from './border-passage';
+export * from './rename-border';

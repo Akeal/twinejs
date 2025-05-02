@@ -6,7 +6,14 @@
 		"yellow": "Yellow",
 		"green": "Green",
 		"blue": "Blue",
-		"purple": "Purple"
+		"purple": "Purple",
+		"emerald": "Emerald",
+		"pistachio": "Hunter Green",
+		"pink": "Pink",
+		"black": "Black",
+		"sky": "Sky",
+		"dark-gray": "Dark Gray",
+		"tan": "Tan"
 	},
 	"common": {
 		"add": "Add",
@@ -45,12 +52,14 @@
 		"story": "Story",
 		"storyFormat": "Story Format",
 		"tag": "Tag",
+		"border": "Border",
 		"test": "Test",
 		"twine": "Twine",
 		"undo": "Undo",
 		"undoChange": "Undo {{change}}",
 		"unmaximize": "Restore Size",
-		"view": "View"
+		"view": "View",
+		"set": "Set"
 	},
 	"components": {
 		"addTagButton": {
@@ -60,6 +69,14 @@
 			"newTag": "New Tag",
 			"tagColorLabel": "Tag Color",
 			"tagNameLabel": "Tag Name"
+		},
+		"addBorderButton": {
+			"alreadyAdded": "This border name has already been added.",
+			"addLabel": "Add Border",
+			"invalidName": "Please enter a valid border name.",
+			"newBorder": "New Border",
+			"borderColorLabel": "Border Color",
+			"borderNameLabel": "Border Name"
 		},
 		"dialogCard": {
 			"contentsCrashed": "Something went wrong with this dialog. Try closing it and opening it again."
@@ -420,7 +437,9 @@
 	},
 	"undoChange": {
 		"addTag": "Add Tag",
+		"addBorder": "Add Border",
 		"changeTagColor": "Change Tag Color",
+		"changeBorderColor": "Change Border Color",
 		"newPassage": "New Passage",
 		"deletePassage": "Delete Passage",
 		"deletePassages": "Delete Passages",
@@ -429,6 +448,8 @@
 		"renamePassage": "Rename Passage",
 		"removeTag": "Remove Tag",
 		"renameTag": "Rename Tag",
+		"removeBorder": "Remove Border",
+		"renameBorder": "Rename Border",
 		"replaceAllText": "Replace All"
 	}
 }

@@ -7,13 +7,17 @@ import {ButtonBar} from '../../components/container/button-bar';
 import {MenuButton} from '../../components/control/menu-button';
 import {RenamePassageButton} from '../../components/passage/rename-passage-button';
 import {AddTagButton} from '../../components/tag';
+import { AddBorderButton } from '../../components/border';
 import {TestPassageButton} from '../../routes/story-edit/toolbar/passage/test-passage-button';
 import {
 	addPassageTag,
+	addPassageBorder,
 	Passage,
 	setTagColor,
+	setBorderColor,
 	Story,
 	storyPassageTags,
+	storyPassageBorders,
 	updatePassage
 } from '../../store/stories';
 import {useUndoableStoriesContext} from '../../store/undoable-stories';
@@ -49,6 +53,23 @@ export const PassageToolbar: React.FC<PassageToolbarProps> = props => {
 		}
 	}
 
+	function handleAddBorder(name: string, color?: Color) {
+		// Kind of tricky. We make adding the tag to the passage undoable, but not
+		// any color change associated with this. This is because we only set a
+		// color here when creating an entirely new tag. If the user is adding an
+		// existing tag, then we would only receive the name here, since it's
+		// currently impossible to add an existing tag and change its color
+		// simultaneously.
+		//
+		// If this changes, then this should change too.
+
+		dispatch(addPassageBorder(story, passage, name), t('undoChange.addBorder'));
+
+		if (color) {
+			dispatch(setBorderColor(story, name, color));
+		}
+	}
+
 	function handleRename(name: string) {
 		// Don't create newly linked passages here because the update action will
 		// try to recreate the passage as it's been renamed--it sees new links in
@@ -76,6 +97,12 @@ export const PassageToolbar: React.FC<PassageToolbarProps> = props => {
 				assignedTags={passage.tags}
 				existingTags={storyPassageTags(story)}
 				onAdd={handleAddTag}
+			/>
+			<AddBorderButton
+				disabled={disabled}
+				assignedBorder={passage.border}
+				existingBorders={storyPassageBorders(story)}
+				onAdd={handleAddBorder}
 			/>
 			<MenuButton
 				disabled={disabled}

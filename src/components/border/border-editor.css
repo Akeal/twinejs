@@ -1,0 +1,91 @@
+@import '../../styles/metrics.css';
+@import '../../styles/colors.css';
+
+.border-editor {
+	display: grid;
+	grid-gap: var(--grid-size);
+	grid-template-columns: repeat(3, min-content);
+}
+
+.border-editor .border-name {
+	align-items: center;
+	background-color: var(--faint-gray);
+	border: 1px solid var(--light-gray);
+	border-radius: var(--control-height);
+	display: inline-flex;
+	height: var(--control-height);
+	padding: var(--grid-size);
+	white-space: nowrap;
+}
+
+.border-editor .border-name.color-red {
+	background-color: var(--faint-red);
+	border: 1px solid var(--light-red);
+	color: var(--dark-red);
+}
+
+.border-editor .border-name.color-orange {
+	background-color: var(--faint-orange);
+	border: 1px solid var(--light-orange);
+	color: var(--dark-orange);
+}
+
+.border-editor .border-name.color-yellow {
+	background-color: var(--faint-yellow);
+	border: 1px solid var(--light-yellow);
+	color: var(--dark-yellow);
+}
+
+.border-editor .border-name.color-green {
+	background-color: var(--faint-green);
+	border: 1px solid var(--light-green);
+	color: var(--dark-green);
+}
+
+.border-editor .border-name.color-blue {
+	background-color: var(--faint-blue);
+	border: 1px solid var(--light-blue);
+	color: var(--dark-blue);
+}
+
+.border-editor .border-name.color-purple {
+	background-color: var(--faint-purple);
+	border: 1px solid var(--light-purple);
+	color: var(--dark-purple);
+}
+
+.border-editor .border-name.color-pistachio {
+	background-color: var(--faint-pistachio);
+	border: 1px solid var(--light-pistachio);
+	color: var(--dark-pistachio);
+}
+
+.border-editor .border-name.color-sky {
+	background-color: var(--faint-sky);
+	border: 1px solid var(--light-sky);
+	color: var(--dark-sky);
+}
+
+.border-editor .border-name.color-emerald {
+	background-color: var(--faint-emerald);
+	border: 1px solid var(--light-emerald);
+	color: var(--dark-emerald);
+}
+
+.border-editor .border-name.color-pink {
+	background-color: var(--faint-pink);
+	border: 1px solid var(--light-pink);
+	color: var(--dark-pink);
+}
+
+.border-editor .border-name.color-tan {
+	background-color: var(--faint-tan);
+	border: 1px solid var(--light-tan);
+	color: var(--dark-tan);
+}
+
+.border-editor .border-name.color-dark-gray {
+	background-color: var(--faint-gray);
+	border: 1px solid var(--gray);
+	color: var(--black);
+}

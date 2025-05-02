@@ -43,10 +43,9 @@ describe('<MarqueeablePassageMap>', () => {
 				passages={story.passages}
 				startPassageId={story.passages[0].id}
 				tagColors={{}}
+				borderColors={{}}
 				visibleZoom={story.zoom}
 				zoom={story.zoom}
-				borderStyle="none"
-				borderColor="black"
 				{...props}
 			/>
 		);

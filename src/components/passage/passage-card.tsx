@@ -19,8 +19,7 @@ export interface PassageCardProps {
 	onSelect: (passage: Passage, exclusive: boolean) => void;
 	passage: Passage;
 	tagColors: TagColors;
-	borderStyle: string;
-	borderColor: string;
+	borderColors: TagColors;
 }
 
 // Needs to fill a large-sized passage card.
@@ -36,8 +35,7 @@ export const PassageCard: React.FC<PassageCardProps> = React.memo(props => {
 		onSelect,
 		passage,
 		tagColors,
-		borderStyle = "none",
-		borderColor = "black",
+		borderColors,
 	} = props;
 	const {t} = useTranslation();
 	const className = React.useMemo(
@@ -56,6 +54,7 @@ export const PassageCard: React.FC<PassageCardProps> = React.memo(props => {
 
 		return (
 			<span className="placeholder">
+				
 				{t(
 					deviceType === 'touchOnly'
 						? 'components.passageCard.placeholderTouch'
@@ -64,15 +63,25 @@ export const PassageCard: React.FC<PassageCardProps> = React.memo(props => {
 			</span>
 		);
 	}, [passage.text, t]);
-	const style = React.useMemo(
+
+	console.log(borderColors);
+
+	const style = 
+
+	React.useMemo(
 		() => ({
-			height: passage.height,
-			left: passage.left,
-			top: passage.top,
-			width: passage.width,
+				height: passage.height,
+				left: passage.left,
+				top: passage.top,
+				width: passage.width,
+				borderStyle: (passage.border != null ? "solid" : "none"), 
+				borderColor: borderColors[passage.border ?? 0],
+				borderRadius: 5,
+				borderWidth: 5
 		}),
-		[passage.height, passage.left, passage.top, passage.width]
+		[passage.height, passage.left, passage.top, passage.width, passage.border]
 	);
+
 	const handleMouseDown = React.useCallback(
 		(event: MouseEvent) => {
 			// Shift- or control-clicking toggles our selected status, but doesn't
@@ -103,7 +112,16 @@ export const PassageCard: React.FC<PassageCardProps> = React.memo(props => {
 		[onSelect, passage]
 	);
 
-	const selectableCardStyle = { "border-style": borderStyle, "border-color": borderColor } as React.CSSProperties;
+	// style. = (
+	// 	passage.border != null ?
+	//  { 
+	// 	"borderStyle": "solid", 
+	// 	"borderColor": borderColors[passage.border],
+	// 	"borderRadius": "5",
+	// 	"borderWidth": "5"
+	// } :
+	//  {}
+	// ) as React.CSSProperties;
 
 	return (
 		<DraggableCore
@@ -121,7 +139,6 @@ export const PassageCard: React.FC<PassageCardProps> = React.memo(props => {
 					onDoubleClick={handleEdit}
 					onSelect={handleSelect}
 					selected={passage.selected}
-					style={selectableCardStyle}
 				>
 					<TagStripe tagColors={tagColors} tags={passage.tags} />
 					<h2>{passage.name}</h2>
